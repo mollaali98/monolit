@@ -1,0 +1,23 @@
+{% extends "./../base" %}
+{% block content %}
+<h1>Author List</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  {% for author in authors %}
+  <tr>
+    <td>{{ author.id }}</td>
+    <td>{{ author.firstName }}</td>
+    <td>{{ author.lastName }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

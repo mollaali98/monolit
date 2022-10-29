@@ -1,0 +1,28 @@
+{% extends "./../base" %}
+{% block content %}
+<h1>Publisher List</h1>
+<table>
+  <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address Line</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for publisher in publishers %}
+    <tr>
+        <td>{{ publisher.id}}</td>
+        <td>{{ publisher.name}}</td>
+        <td>{{ publisher.addressLine }}</td>
+        <td>{{ publisher.city }}</td>
+        <td>{{ publisher.state }}</td>
+        <td>{{ publisher.zip }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
